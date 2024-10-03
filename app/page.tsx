@@ -41,7 +41,8 @@ export default function Home() {
       </div>
       <div className="flex pt-16 space-x-2 w-5/6 mx-auto md:2/6 ">
         <Input
-          placeholder="your todo here"
+          placeholder="votre tâche ici..."
+          value={todo}
           onChange={(e) => setTodo(e.target.value)}
         />
         <Button onClick={handleAddTodo}>
@@ -59,9 +60,6 @@ export default function Home() {
               disabled={editingId !== todo.id}
               onChange={(e) => updateTodo(todo.id, e.target.value)}
             />
-            {/*              <Button>
-              <CheckCheck />
-            </Button> */}
             <Button
               onClick={() => handleUpdateTodo(todo.id, todo.text)}
               size={"icon"}
